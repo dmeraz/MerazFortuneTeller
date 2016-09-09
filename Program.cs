@@ -49,6 +49,15 @@ namespace MerazFortuneTeller
             Console.WriteLine("Please type the number of siblings you have and hit enter.");
 
             int siblings = int.Parse(Console.ReadLine());
+
+            //The user’s fortune should be written as such:
+            //[First Name][Last Name] will retire in [# of Years] with [Amount of Money] in the bank,
+            //a vacation home in [Location] and a [Mode of Transportation].
+
+            Console.WriteLine(string.Concat(firstName + " " + lastName + " " + "will retire in " + "# of Years"
+                + " with " + "Amount of Money" + " in the bank, a vacation home in " + "Location" + ","
+                "and a " + "mode of transportation" + "."); //replace with actual variables!
+
         }
     }
 }
