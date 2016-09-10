@@ -34,23 +34,30 @@ namespace MerazFortuneTeller
 
             int birthMonth = int.Parse(Console.ReadLine());
 
-            switch(birthMonth)
+            switch (birthMonth)
             {
-               
-                case '1' : 
-                case '2' :
-                case '3' :
-                case '4' :
+
+                case '1':
+                case '2':
+                case '3':
+                case '4':
                     {
-                       string moneyInBank = birthMonth.ToString("$100,000");
-                       break;
+                        string moneyInBank = birthMonth.ToString("$100,000");
+                        break;
                     }
-                //case ' =5 <=8 ':
-                //    break;
-                //case ' =9 <=12 ':
-                //    break;
-                //case ' <1 >12 ':
-                //    break;
+
+                    //Alternate approach
+                    //string birthMonth = Console.ReadLine();
+
+                    //if (birthMonth == 1 || == 2)
+                    //abandon alternate approach for now
+
+                    //case ' =5 <=8 ':
+                    //    break;
+                    //case ' =9 <=12 ':
+                    //    break;
+                    //case ' <1 >12 ':
+                    //    break;
 
 
             }
