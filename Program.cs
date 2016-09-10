@@ -27,6 +27,17 @@ namespace MerazFortuneTeller
             Console.WriteLine("Please type your age and hit enter.");
 
             int age = int.Parse(Console.ReadLine());
+            string retirementAge;
+
+            if (age % 2 == 0)
+            {
+                retirementAge = "12";
+            }
+            else
+            {
+                retirementAge = "17";
+            }
+            
 
             //Ask the user for the user’s birth month(as an 'int')
 
@@ -77,7 +88,7 @@ namespace MerazFortuneTeller
             //[First Name][Last Name] will retire in [# of Years] with [Amount of Money] in the bank,
             //a vacation home in [Location] and a [Mode of Transportation].
 
-            Console.WriteLine(string.Concat(firstName + " " + lastName + " " + "will retire in " + "# of Years"
+            Console.WriteLine(string.Concat(firstName + " " + lastName + " " + "will retire in " + retirementAge
                 + " with " + moneyInBank + " in the bank, a vacation home in " + "Location" + ", " +
                 "and a " + "mode of transportation" + ".")); //replace with actual variables!
 
