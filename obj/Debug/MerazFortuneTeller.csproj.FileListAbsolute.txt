@@ -1,1 +1,6 @@
 c:\users\wecancodeit\documents\visual studio 2015\Projects\MerazFortuneTeller\MerazFortuneTeller\bin\Debug\MerazFortuneTeller.exe.config
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\MerazFortuneTeller\MerazFortuneTeller\obj\Debug\MerazFortuneTeller.csprojResolveAssemblyReference.cache
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\MerazFortuneTeller\MerazFortuneTeller\bin\Debug\MerazFortuneTeller.exe
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\MerazFortuneTeller\MerazFortuneTeller\bin\Debug\MerazFortuneTeller.pdb
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\MerazFortuneTeller\MerazFortuneTeller\obj\Debug\MerazFortuneTeller.exe
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\MerazFortuneTeller\MerazFortuneTeller\obj\Debug\MerazFortuneTeller.pdb

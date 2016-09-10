@@ -33,38 +33,33 @@ namespace MerazFortuneTeller
             Console.WriteLine("Please type your birth month as a number from 1-12.");
 
             int birthMonth = int.Parse(Console.ReadLine());
+            string moneyInBank;
 
-            switch (birthMonth)
+            if (birthMonth >= 5 && birthMonth <= 8)
             {
-
-                case '1':
-                case '2':
-                case '3':
-                case '4':
-                    {
-                        string moneyInBank = birthMonth.ToString("$100,000");
-                        break;
-                    }
-
-                    //Alternate approach
-                    //string birthMonth = Console.ReadLine();
-
-                    //if (birthMonth == 1 || == 2)
-                    //abandon alternate approach for now
-
-                    //case ' =5 <=8 ':
-                    //    break;
-                    //case ' =9 <=12 ':
-                    //    break;
-                    //case ' <1 >12 ':
-                    //    break;
-
-
+                moneyInBank = "$6.5M";
             }
+            else if (birthMonth >= 9 && birthMonth <= 12)
+            {
+                moneyInBank = "$500,000";
+            }
+            else if (birthMonth >= 1 && birthMonth <= 4)
+            {
+                moneyInBank = "$100,000";
+            }
+            else if (birthMonth > 1 || birthMonth < 12)
+            {
+                moneyInBank = "$0.00";
+            }
+            else
+            {
+                moneyInBank = "$0.00";
+            }
+                
 
             //Ask the user for the user’s favorite ROYGBIV color
 
-            Console.WriteLine("Please type your favorite ROYGBIV color. If you do not know what ROYGBIV is, type \"Help\" and hit enter.");
+        Console.WriteLine("Please type your favorite ROYGBIV color. If you do not know what ROYGBIV is, type \"Help\" and hit enter.");
 
             string favColor = Console.ReadLine();
 
@@ -83,8 +78,8 @@ namespace MerazFortuneTeller
             //a vacation home in [Location] and a [Mode of Transportation].
 
             Console.WriteLine(string.Concat(firstName + " " + lastName + " " + "will retire in " + "# of Years"
-                + " with " + "Amount of Money" + " in the bank, a vacation home in " + "Location" + ","
-                "and a " + "mode of transportation" + "."); //replace with actual variables!
+                + " with " + moneyInBank + " in the bank, a vacation home in " + "Location" + ", " +
+                "and a " + "mode of transportation" + ".")); //replace with actual variables!
 
         }
     }
