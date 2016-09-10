@@ -34,6 +34,27 @@ namespace MerazFortuneTeller
 
             int birthMonth = int.Parse(Console.ReadLine());
 
+            switch(birthMonth)
+            {
+               
+                case '1' : 
+                case '2' :
+                case '3' :
+                case '4' :
+                    {
+                       string moneyInBank = birthMonth.ToString("$100,000");
+                       break;
+                    }
+                //case ' =5 <=8 ':
+                //    break;
+                //case ' =9 <=12 ':
+                //    break;
+                //case ' <1 >12 ':
+                //    break;
+
+
+            }
+
             //Ask the user for the user’s favorite ROYGBIV color
 
             Console.WriteLine("Please type your favorite ROYGBIV color. If you do not know what ROYGBIV is, type \"Help\" and hit enter.");
