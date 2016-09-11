@@ -73,10 +73,10 @@ namespace MerazFortuneTeller
 
             //If the user does not know what ROYGBIV is, ask them to enter “Help” to get a list of the ROYGBIV colors
 
-            Console.WriteLine("Please type your favorite ROYGBIV color and hit enter. If you do not know what ROYGBIV is, type \"Help\" and hit enter.");
+            Console.WriteLine("Please type your favorite ROYGBIV color and hit enter. \n If you do not know what ROYGBIV is, type \"Help\" and hit enter.");
 
             string favColor = Console.ReadLine();
-            string transportMode;
+            string transportMode = "";
 
             //Help! What's ROYGBIV?!
 
@@ -84,13 +84,15 @@ namespace MerazFortuneTeller
             {
                 Console.WriteLine("According to Wikipedia, ROYGBIV or Roy G. Biv is an acronym" +
                     " for the sequence of hues commonly described as making up a rainbow:" +
-                    " red, /n orange, /n yellow, /n green, /n blue, /n indigo /n and violet." +
-                    "/n Now, type your favorite ROYGBIV color and hit enter.");
+                    " \n red, \n orange, \n yellow, \n green, \n blue, \n indigo \n and violet. \n" +
+                    "Now, type your favorite ROYGBIV color and hit enter.");
+                favColor = Console.ReadLine();
             }
-            else
-            {
-                //program continues
-            }
+
+            //else
+            //{
+            //    //program continues
+            //}
 
             if (favColor == "red")
             {
@@ -110,7 +112,7 @@ namespace MerazFortuneTeller
             }
             else if (favColor == "blue")
             {
-                transportMode = "DUKW";
+                transportMode = "DUKW"; //amphibious military vehicle commonly used in tourist attractions
             }
             else if (favColor == "indigo")
             {
@@ -120,7 +122,7 @@ namespace MerazFortuneTeller
             {
                 transportMode = "pirate ship";
             }
-            else { }
+            //else { }
 
             //Ask the user for the number of siblings the user has
 
