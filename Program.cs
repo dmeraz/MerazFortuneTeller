@@ -18,13 +18,13 @@ namespace MerazFortuneTeller
 
             //Ask the user for the user’s last name
 
-            Console.WriteLine("Please type your last name and hit enter.");
+            Console.WriteLine("\nPlease type your last name and hit enter.");
 
             string lastName = Console.ReadLine();
 
             //Ask the user for the user’s age 
 
-            Console.WriteLine("Please type your age and hit enter.");
+            Console.WriteLine("\nPlease type your age and hit enter.");
 
             int age = int.Parse(Console.ReadLine());
             string retirementAge;
@@ -40,7 +40,7 @@ namespace MerazFortuneTeller
 
             //Ask the user for the user’s birth month(as an 'int')
 
-            Console.WriteLine("Please type your birth month as a number from 1-12.");
+            Console.WriteLine("\nPlease type your birth month as a number from 1-12.");
 
             int birthMonth = int.Parse(Console.ReadLine());
             string moneyInBank;
@@ -73,20 +73,22 @@ namespace MerazFortuneTeller
 
             //If the user does not know what ROYGBIV is, ask them to enter “Help” to get a list of the ROYGBIV colors
 
-            Console.WriteLine("Please type your favorite ROYGBIV color and hit enter. \n If you do not know what ROYGBIV is, type \"Help\" and hit enter.");
+            Console.WriteLine("\nPlease type your favorite ROYGBIV color and hit enter. \n If you do not know what ROYGBIV is, type \"Help\" and hit enter.");
 
             string favColor = Console.ReadLine();
+            favColor.ToLower();
             string transportMode = "";
 
             //Help! What's ROYGBIV?!
 
             if (favColor == "Help")
             {
-                Console.WriteLine("According to Wikipedia, ROYGBIV or Roy G. Biv is an acronym" +
+                Console.WriteLine("\nAccording to Wikipedia, ROYGBIV or Roy G. Biv is an acronym" +
                     " for the sequence of hues commonly described as making up a rainbow:" +
                     " \n red, \n orange, \n yellow, \n green, \n blue, \n indigo \n and violet. \n" +
                     "Now, type your favorite ROYGBIV color and hit enter.");
                 favColor = Console.ReadLine();
+                favColor.ToLower();
             }
 
             //else
@@ -94,31 +96,31 @@ namespace MerazFortuneTeller
             //    //program continues
             //}
 
-            if (favColor == "red")
+            if (favColor.ToLower() == "red")
             {
                 transportMode = "space ship";
             }
-            else if (favColor == "orange")
+            else if (favColor.ToLower() == "orange")
             {
                 transportMode = "train";
             }
-            else if (favColor == "yellow")
+            else if (favColor.ToLower() == "yellow")
             {
                 transportMode = "tractor";
             }
-            else if (favColor == "green")
+            else if (favColor.ToLower() == "green")
             {
                 transportMode = "teleportation machine";
             }
-            else if (favColor == "blue")
+            else if (favColor.ToLower() == "blue")
             {
                 transportMode = "DUKW"; //amphibious military vehicle commonly used in tourist attractions
             }
-            else if (favColor == "indigo")
+            else if (favColor.ToLower() == "indigo")
             {
                 transportMode = "sports car";
             }
-            else if (favColor == "violet")
+            else if (favColor.ToLower() == "violet")
             {
                 transportMode = "pirate ship";
             }
@@ -126,7 +128,7 @@ namespace MerazFortuneTeller
 
             //Ask the user for the number of siblings the user has
 
-            Console.WriteLine("Please type the number of siblings you have and hit enter.");
+            Console.WriteLine("\nPlease type the number of siblings you have and hit enter.");
 
             int siblings = int.Parse(Console.ReadLine());
             string vacaHome;
@@ -160,9 +162,9 @@ namespace MerazFortuneTeller
             //[First Name][Last Name] will retire in [# of Years] with [Amount of Money] in the bank,
             //a vacation home in [Location] and a [Mode of Transportation].
 
-            Console.WriteLine(string.Concat(firstName + " " + lastName + " " + "will retire in " + retirementAge
-                + " with " + moneyInBank + " in the bank, a vacation home in " + vacaHome + ", "
-                + "and a " + transportMode + "."));
+            Console.WriteLine(string.Concat("\n" + firstName + " " + lastName + " " + "will retire in " + retirementAge
+                + " with " + moneyInBank + " in the bank, \n" + "a vacation home in " + vacaHome + ", "
+                + "and a " + transportMode + ".\n"));
 
         }
     }
