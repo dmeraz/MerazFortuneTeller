@@ -71,61 +71,96 @@ namespace MerazFortuneTeller
 
             //Ask the user for the user’s favorite ROYGBIV color
 
+            //If the user does not know what ROYGBIV is, ask them to enter “Help” to get a list of the ROYGBIV colors
+
             Console.WriteLine("Please type your favorite ROYGBIV color and hit enter. If you do not know what ROYGBIV is, type \"Help\" and hit enter.");
 
             string favColor = Console.ReadLine();
             string transportMode;
 
-            //Set conditional to branch for color vs "Help"
+            //Help! What's ROYGBIV?!
 
-            if ( favColor = "Help")
-
-                Console.WriteLine("According to Wikipedia, ROYGBIV or Roy G. Biv is an acronym"+
-                    " for the sequence of hues commonly described as making up a rainbow:"+
-                    " red, orange, yellow, green, blue, indigo and violet."+
-                    "/n /n Now, type your favorite ROYGBIV color and hit enter.");
-
-            //If the user does not know what ROYGBIV is, ask them to enter “Help” to get a list of the ROYGBIV colors
-
-            switch (favColor)
+            if (favColor == "Help")
             {
-                case "red":
-                    transportMode = "space ship";
-                    break;
-                case "orange":
-                    transportMode = "train";
-                    break;
-                case "yellow":
-                    transportMode = "tractor";
-                    break;
-                case "green":
-                    transportMode = "teleportation machine";
-                    break;
-                case "blue":
-                    transportMode = "DUKW";
-                    break;
-                case "indigo":
-                    transportMode = "sports car";
-                    break;
-                case "violet":
-                    transportMode = "pirate ship";
-                    break;
-
+                Console.WriteLine("According to Wikipedia, ROYGBIV or Roy G. Biv is an acronym" +
+                    " for the sequence of hues commonly described as making up a rainbow:" +
+                    " red, /n orange, /n yellow, /n green, /n blue, /n indigo /n and violet." +
+                    "/n Now, type your favorite ROYGBIV color and hit enter.");
             }
+            else
+            {
+                //program continues
+            }
+
+            if (favColor == "red")
+            {
+                transportMode = "space ship";
+            }
+            else if (favColor == "orange")
+            {
+                transportMode = "train";
+            }
+            else if (favColor == "yellow")
+            {
+                transportMode = "tractor";
+            }
+            else if (favColor == "green")
+            {
+                transportMode = "teleportation machine";
+            }
+            else if (favColor == "blue")
+            {
+                transportMode = "DUKW";
+            }
+            else if (favColor == "indigo")
+            {
+                transportMode = "sports car";
+            }
+            else if (favColor == "violet")
+            {
+                transportMode = "pirate ship";
+            }
+            else { }
 
             //Ask the user for the number of siblings the user has
 
             Console.WriteLine("Please type the number of siblings you have and hit enter.");
 
             int siblings = int.Parse(Console.ReadLine());
+            string vacaHome;
+
+            if (siblings == 0)
+            {
+                vacaHome = "Alaska";
+            }
+            else if (siblings == 1)
+            {
+                vacaHome = "Upstate New York";
+            }
+            else if (siblings == 2)
+            {
+                vacaHome = "Hawaii";
+            }
+            else if (siblings == 3)
+            {
+                vacaHome = "Costa Rica";
+            }
+            else if (siblings > 3)
+            {
+                vacaHome = "Costa Rica";
+            }
+            else
+            {
+                vacaHome = "Sahara Desert";
+            }
 
             //The user’s fortune should be written as such:
             //[First Name][Last Name] will retire in [# of Years] with [Amount of Money] in the bank,
             //a vacation home in [Location] and a [Mode of Transportation].
 
             Console.WriteLine(string.Concat(firstName + " " + lastName + " " + "will retire in " + retirementAge
-                + " with " + moneyInBank + " in the bank, a vacation home in " + "Location" + ", "
-                + "and a " + transportMode + ".")); //replace with actual variables!
+                + " with " + moneyInBank + " in the bank, a vacation home in " + vacaHome + ", "
+                + "and a " + transportMode + "."));
 
         }
     }
