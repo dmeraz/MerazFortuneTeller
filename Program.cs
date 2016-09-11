@@ -10,9 +10,12 @@ namespace MerazFortuneTeller
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("\aWelcome to Madam Meraz's portal for predictions.\nHit enter to continue.");
+            Console.ReadLine();
+
             //Ask the user for the user’s first name
 
-            Console.WriteLine("Please type your first name and hit enter.");
+            Console.WriteLine("\nPlease type your first name and hit enter.");
 
             string firstName = Console.ReadLine();
 
@@ -81,7 +84,7 @@ namespace MerazFortuneTeller
 
             //Help! What's ROYGBIV?!
 
-            if (favColor == "Help")
+            if (favColor.ToLower() == "help")
             {
                 Console.WriteLine("\nAccording to Wikipedia, ROYGBIV or Roy G. Biv is an acronym" +
                     " for the sequence of hues commonly described as making up a rainbow:" +
