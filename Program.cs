@@ -99,35 +99,31 @@ namespace MerazFortuneTeller
             //    //program continues
             //}
 
-            if (favColor.ToLower() == "red")
+            switch (favColor.ToLower())
             {
-                transportMode = "space ship";
+                case "red":
+                    transportMode = "space ship";
+                    break;
+                case "orange":
+                    transportMode = "train";
+                    break;
+                case "yellow":
+                    transportMode = "tractor";
+                    break;
+                case "green":
+                    transportMode = "teleportation machine";
+                    break;
+                case "blue":
+                    transportMode = "DUKW";//amphibious military vehicle commonly used in tourist attractions
+                    break;
+                case "indigo":
+                    transportMode = "sports car";
+                    break;
+                case "violet":
+                    transportMode = "pirate ship";
+                    break;
             }
-            else if (favColor.ToLower() == "orange")
-            {
-                transportMode = "train";
-            }
-            else if (favColor.ToLower() == "yellow")
-            {
-                transportMode = "tractor";
-            }
-            else if (favColor.ToLower() == "green")
-            {
-                transportMode = "teleportation machine";
-            }
-            else if (favColor.ToLower() == "blue")
-            {
-                transportMode = "DUKW"; //amphibious military vehicle commonly used in tourist attractions
-            }
-            else if (favColor.ToLower() == "indigo")
-            {
-                transportMode = "sports car";
-            }
-            else if (favColor.ToLower() == "violet")
-            {
-                transportMode = "pirate ship";
-            }
-            //else { }
+            
 
             //Ask the user for the number of siblings the user has
 
